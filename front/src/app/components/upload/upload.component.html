@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="content">
+        <div class="header">
+            <h1>File Upload</h1>
+        </div>
+        <div class="row">
+            <div class="col-med-6"></div>
+            <div class="col-med-6">
+                    <div class="input-group mb-3">
+                        <input class="form-control upload" id="formFileLg" type="file" (change)="onFileChange($event)" />
+                        <button class="btn btn-outline-secondary" id="formFileLg"  (click)="onUpload()">
+                            Subir
+                        </button>
+                    </div>
+            </div>
+            <div class="col-med-6">
+                <form [formGroup] = "fileForm" (ngSubmit)="onSubmit()" enctype="multipart">
+                    <input formControlName="file" class="form-control upload" id="formFileLg" type="file" (change)="onFileChange($event)" />
+                    <button type="submit" class="btn btn-outline-secondary" id="formFileLg">
+                        Subir
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
